@@ -1,0 +1,163 @@
+C51 COMPILER V7.06   PROJECT                                                               09/07/2014 12:40:19 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE PROJECT
+OBJECT MODULE PLACED IN project.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE project.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg52.h> #include<delay.h> 
+   2          
+   3          sbit m1=P1^0;
+   4          sbit m2=P1^1;
+   5          sbit m3=P1^2;
+   6          sbit m4=P1^3;
+   7          
+   8          sbit m5=P1^4;
+   9          sbit m6=P1^5;
+  10          sbit m7=P1^6;
+  11          sbit m8=P1^7;
+  12          
+  13          sbit m9=P2^0;
+  14          sbit m20=P2^1;
+  15          sbit m11=P2^2;
+  16          sbit m12=P2^3;
+  17          
+  18          sbit s1=P3^0;
+  19          sbit s2=P3^1;
+  20          sbit s3=P3^2;
+  21          sbit s4=P3^3;
+  22          sbit s5=P3^4;
+  23          sbit s6=P3^5;
+  24          sbit buz=P3^6; //buzzer
+  25          void main()
+  26          {
+  27   1      m1=m2=m3=m4=m5=m6=m7=m8=m9=m20=m11=m12=0;
+  28   1      s1=s3=s2=s4=s5=s6=0;
+  29   1      while(1)
+  30   1      {
+  31   2      
+  32   2      if(s1==1)
+  33   2      {
+  34   3      while(s1==1)
+  35   3      {
+  36   4      m1=1;m2=0;m3=0;m4=0;
+  37   4      delay(20);
+  38   4      m1=0;m2=1;m3=0;m4=0;
+  39   4      delay(20);
+  40   4      m1=0;m2=0;m3=1;m4=0;
+  41   4      delay(20);
+  42   4      m1=0;m2=0;m3=0;m4=1;
+  43   4      delay(20);
+  44   4      }
+  45   3      }
+  46   2      
+  47   2      
+  48   2      //2
+  49   2      
+  50   2      if(s2==1)
+  51   2      {
+  52   3      while(s2==1)
+  53   3      {
+  54   4      m5=1;m6=0;m7=0;m8=0;
+  55   4      delay(20);
+C51 COMPILER V7.06   PROJECT                                                               09/07/2014 12:40:19 PAGE 2   
+
+  56   4      m5=0;m6=1;m7=0;m8=0;
+  57   4      delay(20);
+  58   4      m5=0;m6=0;m7=1;m8=0;
+  59   4      delay(20);
+  60   4      m5=0;m6=0;m7=0;m8=1;
+  61   4      delay(20);
+  62   4      }
+  63   3      }
+  64   2      
+  65   2      
+  66   2      //3
+  67   2      
+  68   2      if(s3==1)
+  69   2      {
+  70   3      while(s3==1)
+  71   3      {
+  72   4      m9=1;m20=0;m11=0;m12=0;
+  73   4      delay(20);
+  74   4      m9=0;m20=1;m11=0;m12=0;
+  75   4      delay(20);
+  76   4      m9=0;m20=0;m11=1;m12=0;
+  77   4      delay(20);
+  78   4      m9=0;m20=0;m11=0;m12=1;
+  79   4      delay(20);
+  80   4      }
+  81   3      }
+  82   2      
+  83   2      //4
+  84   2      
+  85   2      if(s4==1)
+  86   2      {
+  87   3      while(s4==1)
+  88   3      {
+  89   4      m4=1;m2=0;m3=0;m1=0;
+  90   4      delay(20);
+  91   4      m2=0;m3=1;m1=0;m4=0;
+  92   4      delay(20);
+  93   4      m1=0;m3=0;m2=1;m4=0;
+  94   4      delay(20);
+  95   4      m4=0;m2=0;m3=0;m1=1;
+  96   4      delay(20);
+  97   4      }
+  98   3      }
+  99   2      
+ 100   2      //5
+ 101   2      
+ 102   2      if(s5==1)
+ 103   2      {
+ 104   3      while(s5==1)
+ 105   3      {
+ 106   4      m8=1;m7=0;m6=0;m5=0;
+ 107   4      delay(20);
+ 108   4      m8=0;m7=1;m6=0;m5=0;
+ 109   4      delay(20);
+ 110   4      m8=0;m7=0;m6=1;m5=0;
+ 111   4      delay(20);
+ 112   4      m8=0;m7=0;m6=0;m5=1;
+ 113   4      delay(20);
+ 114   4      }
+ 115   3      }
+ 116   2      
+ 117   2      //6
+C51 COMPILER V7.06   PROJECT                                                               09/07/2014 12:40:19 PAGE 3   
+
+ 118   2      
+ 119   2      if(s6==1)
+ 120   2      {
+ 121   3      while(s6==1)
+ 122   3      {
+ 123   4      m12=1;m11=0;m20=0;m9=0;
+ 124   4      delay(20);
+ 125   4      m12=0;m11=1;m20=0;m9=0;
+ 126   4      delay(20);
+ 127   4      m12=0;m11=0;m20=1;m9=0;
+ 128   4      delay(20);
+ 129   4      m12=0;m11=0;m20=0;m9=1;
+ 130   4      delay(20);
+ 131   4      }
+ 132   3      }
+ 133   2      
+ 134   2      
+ 135   2      }//end of while
+ 136   1      }//end of main
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    393    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
